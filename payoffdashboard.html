@@ -48,7 +48,10 @@
         <path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h6a2 2 0 012 2v1" />
       </svg>
     </a>
-  
+      <select id="language-switcher" class="border border-[#cedbe8] rounded px-2 py-1 text-sm">
+        <option value="en">🇺🇸 English</option>
+        <option value="pt">🇧🇷 Português</option>
+      </select>
     <!-- Notifications Icon -->
     <button class="relative" aria-label="Notifications">
       <span class="absolute -top-1 -right-1 inline-block w-2 h-2 bg-red-500 rounded-full"></span>
@@ -147,5 +150,71 @@
     </div>
   </div>
 </div>
+
+    <script>
+  const translations = {
+    pt: {
+      'Add Debt': 'Registrar Dívida',
+      'Plan': 'Plano',
+      'Education': 'Educação',
+      'Admin': 'Administração',
+      'Logout': 'Sair',
+      'Hi, Jonathan': 'Olá, Jonathan',
+      'Home': 'Início',
+      'Register Debt': 'Registrar Dívida',
+      'Payoff Plan': 'Plano de Quitação',
+      'Financial Education': 'Educação Financeira',
+      'Admin Dashboard': 'Painel Administrativo',
+      'Debt Repayment Progress': 'Progresso da Quitação',
+      'Debt Repayment': 'Quitação da Dívida',
+      '60% Complete': '60% Concluído',
+      'Next Payment Due': 'Próximo Pagamento',
+      'Due Date: July 15, 2024': 'Vencimento: 15 de Julho de 2024',
+      'Key Metrics': 'Métricas Principais',
+      'Total Paid': 'Total Pago',
+      'Remaining Debt': 'Dívida Restante',
+      'Estimated Repayment Time': 'Tempo Estimado de Quitação',
+      'Register Payment': 'Registrar Pagamento',
+      'View Plan': 'Ver Plano'
+    },
+    en: {} // texto original se restaura automáticamente
+  };
+
+  function translatePage(lang) {
+    document.querySelectorAll('body *').forEach(el => {
+      if (el.children.length === 0 && el.textContent.trim()) {
+        const original = el.getAttribute('data-original') || el.textContent.trim();
+        if (!el.getAttribute('data-original')) {
+          el.setAttribute('data-original', original);
+        }
+
+        if (translations[lang] && translations[lang][original]) {
+          el.textContent = translations[lang][original];
+        } else if (lang === 'en') {
+          el.textContent = el.getAttribute('data-original');
+        }
+      }
+
+      // traducir placeholder si aplica
+      if (el.placeholder) {
+        const originalPlaceholder = el.getAttribute('data-original-placeholder') || el.placeholder;
+        if (!el.getAttribute('data-original-placeholder')) {
+          el.setAttribute('data-original-placeholder', originalPlaceholder);
+        }
+
+        if (translations[lang][originalPlaceholder]) {
+          el.placeholder = translations[lang][originalPlaceholder];
+        } else if (lang === 'en') {
+          el.placeholder = el.getAttribute('data-original-placeholder');
+        }
+      }
+    });
+  }
+
+  document.getElementById('language-switcher').addEventListener('change', (e) => {
+    translatePage(e.target.value);
+  });
+</script>
+
 </body>
 </html>
