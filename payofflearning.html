@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <title>✔ Pay Off</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&family=Manrope:wght@400;500;700;800&family=Noto+Sans:wght@400;500;700;900"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+      }
+    </script>
+  </head>
+  <body class="bg-white min-h-screen" style="font-family: Manrope, 'Noto Sans', sans-serif;">
+    <header class="bg-white border-b border-[#cedbe8]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <h1 class="text-2xl font-extrabold text-[#0d141c]">
+                <span class="text-blue-600">✔ Pay Off</span> 
+            </h1>
+          </div>
+          <!-- Desktop Menu -->
+<div class="hidden md:flex space-x-6 items-center">
+    <!-- Home Icon -->
+    <a href="payoffdashboard.html" class="text-[#0d141c]" aria-label="Home">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l9-9 9 9M4 10v10a1 1 0 001 1h3m10-11v10a1 1 0 01-1 1h-3" />
+      </svg>
+    </a>
+  
+    <a href="payoffdebt.html" class="text-[#0d141c] text-sm font-medium">Add Debt</a>
+    <a href="payoffPlan.html" class="text-[#0d141c] text-sm font-medium">Plan</a>
+    <a href="payofflearning.html" class="text-[#0d141c] text-sm font-medium">Education</a>
+    <a href="payoffadmin.html" class="text-[#0d141c] text-sm font-medium">Admin</a>
+  
+    <!-- Logout Icon -->
+    <a href="payofflogin.html" class="text-[#0d141c]" aria-label="Logout">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h6a2 2 0 012 2v1" />
+      </svg>
+    </a>
+  
+    <!-- Notifications Icon -->
+    <button class="relative" aria-label="Notifications">
+      <span class="absolute -top-1 -right-1 inline-block w-2 h-2 bg-red-500 rounded-full"></span>
+      <svg class="w-5 h-5 text-[#0d141c]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+      </svg>
+    </button>
+            <div class="flex items-center space-x-2">
+              <span class="text-sm text-[#0d141c] font-medium">Hi, Jonathan</span>
+              <div
+                class="w-8 h-8 rounded-full bg-center bg-cover"
+                style="background-image: url('https://lh3.googleusercontent.com/a-/profile');"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden flex items-center">
+            <button onclick="toggleMenu()" class="text-[#0d141c] focus:outline-none">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+        <a href="payoffdashboard.html" class="block text-[#0d141c] text-sm font-medium">Home</a>
+        <a href="payoffdebt.html" class="block text-[#0d141c] text-sm font-medium">Register Debt</a>
+        <a href="payoffPlan.html" class="block text-[#0d141c] text-sm font-medium">Payoff Plan</a>
+        <a href="payofflearning.html" class="block text-[#0d141c] text-sm font-medium">Financial Education</a>
+        <a href="payoffadmin.html" class="block text-[#0d141c] text-sm font-medium">Admin Dashboard</a>
+        <a href="payofflogin.html" class="block text-[#0d141c] text-sm font-medium">Logout</a>
+      </div>
+    </header>
+
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+              <div class="flex min-w-72 flex-col gap-3">
+                <p class="text-[#0d141c] tracking-light text-[32px] font-bold leading-tight">Learning Paths</p>
+                <p class="text-[#49739c] text-sm font-normal leading-normal">Explore personalized paths to financial wellness.</p>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-xl">
+                <div class="flex flex-col gap-1 flex-[2_2_0px]">
+                  <p class="text-[#0d141c] text-base font-bold leading-tight">How to Get Out of Credit Card Debt</p>
+                  <p class="text-[#49739c] text-sm font-normal leading-normal">Learn strategies to manage and eliminate credit card debt.</p>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBgbj9R68kAO4QdZG7lyqXIlU4iECGnL5Uc1cR55eUuW-qF8No3acRsN8cRr2wqlhvQ0uMFgNZvE7GKn2tWkZo4JVXPlGRFyFMipSEzNM7Jzp8bXCRj8qrRAEKslpF9CF9d2NbTjsrxmhwZLJiv801zmmT52AAAuUO00kCKqOxixUEFuer_FvIs0C4xMbA0W8HBnA5D7KzwpxPyKWHAN6rHOjptMtffQuQYc4Mb-3HRWQB_xFqedsPZf4gb9oezeEI3o6Fvfy8BE0c");'
+                ></div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-xl">
+                <div class="flex flex-col gap-1 flex-[2_2_0px]">
+                  <p class="text-[#0d141c] text-base font-bold leading-tight">Financial Planning for Freelancers</p>
+                  <p class="text-[#49739c] text-sm font-normal leading-normal">Master budgeting, saving, and investing as a freelancer.</p>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAve950ekmWa-Vo1iqkVRattFN-8xPNXccm06yXRSCHb8hMg3DG0OHETa6qpZ4Yr5JztpDR3OI--eudors-NVljRvemkndxWfInaF6DLw1QjCUnCbBwcV4DOqVs21fO5c-HsqFlVs-giVb7ZmwPu7c01zLtsnPboTQCkHFC1LjiSgrHX5V87HMlFiUe2TOaCJ1QVy_h2aMb6q1CCUCD6fshMC8ndNa4Q_0LYMsvLsz8cvnmki9kEU3UmONHzgkkpsRg1VctKp9b5_Y");'
+                ></div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-xl">
+                <div class="flex flex-col gap-1 flex-[2_2_0px]">
+                  <p class="text-[#0d141c] text-base font-bold leading-tight">Understanding Compound Interest</p>
+                  <p class="text-[#49739c] text-sm font-normal leading-normal">Discover how compound interest works and how to leverage it.</p>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAfIoJ7JCfUxccqR5vcrzlYHLg5QO1adlJG2MBUU6wGu2U2-9ZoQL1xxQKj0qFEHD-F5rWU-ClzJjQ8O4nyLgmcv8jsM-kPgkjIzNLbaw65OmW0jrIXggKSWfvMoxNySKFKBU9e3J_LUEyW5B92y-tsxRnYWOTiu80HbnD9gUHfT0nza_DBNr8mOoTTiyhY1TG8Opl3WeRRukn9EIe4rcPEsX8-qQOb9Xza5zPQOs3I2mTRts036PrFQ0qhenWFJ5AgnZo0A6PpWFU");'
+                ></div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-xl">
+                <div class="flex flex-col gap-1 flex-[2_2_0px]">
+                  <p class="text-[#0d141c] text-base font-bold leading-tight">Investing Basics for Beginners</p>
+                  <p class="text-[#49739c] text-sm font-normal leading-normal">Get started with investing with this beginner-friendly guide.</p>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuByi0y35gxS1BHrk6XPKOf5Z-rvHtT2WlRNPDKxQI6e3ExuOjBiqgSogft8YDAvrfokMN_IYGWevzbXbq6Xvzziq3xX3Glt3Sig4BxKuYKVRxNUGxh-xxxy-rn9PgV7Ol4bjQZ8T_cPbic_d2M3mYRhi50Hj1JymP-TngQkRM5HQ9cl571GW-di-bBmhnJGoeDAJprRIAz2aFvy6pGSp7ca6hFe_5a74De_Qu3QEE4TqMKFO_GLumbtbrIFmd_Vc-U-BH6qO7YhHcc");'
+                ></div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-xl">
+                <div class="flex flex-col gap-1 flex-[2_2_0px]">
+                  <p class="text-[#0d141c] text-base font-bold leading-tight">Budgeting for Big Life Events</p>
+                  <p class="text-[#49739c] text-sm font-normal leading-normal">Plan your finances for major events like buying a home or starting a family.</p>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCqwRXJkEcAEjt4a66eSiTfgYSdeP_2OpeIP5x3oIRJ6mws59842FKj-wAxZmubd-4xwlhQWuIqi-_T84JkBGYVpwQc93SVgixCBJSl7LSllrye1ImCRsxzAzezhKlxRp90o1qYGHKnAu9Zk3GPdFvOtiwW1nkYXZIpBoSWk22dd5LdWkVCTxIBwdjAGk0PMpKPbjnSnqaAWbYAst27wT3K1QaFbG4ytgLJJVLYu35CTVEUURZkDFXLxL98wPZYfOFcK3ixbGjs1bo");'
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
