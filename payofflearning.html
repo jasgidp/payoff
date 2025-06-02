@@ -48,6 +48,10 @@
         <path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h6a2 2 0 012 2v1" />
       </svg>
     </a>
+  <select id="language-switcher" class="ml-4 border border-[#cedbe8] rounded px-2 py-1 text-sm">
+  <option value="en">🇺🇸 English</option>
+  <option value="pt">🇧🇷 Português</option>
+</select>
   
     <!-- Notifications Icon -->
     <button class="relative" aria-label="Notifications">
@@ -159,5 +163,69 @@
         </div>
       </div>
     </div>
+    <script>
+  const translations = {
+    pt: {
+      'Add Debt': 'Registrar Dívida',
+      'Plan': 'Plano',
+      'Education': 'Educação',
+      'Admin': 'Administração',
+      'Logout': 'Sair',
+      'Hi, Jonathan': 'Olá, Jonathan',
+      'Home': 'Início',
+      'Register Debt': 'Registrar Dívida',
+      'Payoff Plan': 'Plano de Quitação',
+      'Financial Education': 'Educação Financeira',
+      'Admin Dashboard': 'Painel Administrativo',
+      'Learning Paths': 'Trilhas Educativas',
+      'Explore personalized paths to financial wellness.': 'Explore trilhas personalizadas para o bem-estar financeiro.',
+      'How to Get Out of Credit Card Debt': 'Como Sair das Dívidas do Cartão de Crédito',
+      'Learn strategies to manage and eliminate credit card debt.': 'Aprenda estratégias para gerenciar e eliminar dívidas de cartão.',
+      'Financial Planning for Freelancers': 'Planejamento Financeiro para Freelancers',
+      'Master budgeting, saving, and investing as a freelancer.': 'Domine orçamento, economia e investimentos como freelancer.',
+      'Understanding Compound Interest': 'Entendendo o Juros Compostos',
+      'Discover how compound interest works and how to leverage it.': 'Descubra como funcionam os juros compostos e como aproveitá-los.',
+      'Investing Basics for Beginners': 'Investimentos Básicos para Iniciantes',
+      'Get started with investing with this beginner-friendly guide.': 'Comece a investir com este guia para iniciantes.',
+      'Budgeting for Big Life Events': 'Orçamento para Grandes Eventos da Vida',
+      'Plan your finances for major events like buying a home or starting a family.': 'Planeje suas finanças para grandes eventos como comprar uma casa ou formar uma família.'
+    }
+  };
+
+  function translatePage(lang) {
+    document.querySelectorAll('body *').forEach(el => {
+      if (el.children.length === 0 && el.textContent.trim()) {
+        const original = el.getAttribute('data-original') || el.textContent.trim();
+        if (!el.hasAttribute('data-original')) {
+          el.setAttribute('data-original', original);
+        }
+
+        if (translations[lang][original]) {
+          el.textContent = translations[lang][original];
+        } else if (lang === 'en') {
+          el.textContent = el.getAttribute('data-original');
+        }
+      }
+
+      if (el.placeholder) {
+        const originalPlaceholder = el.getAttribute('data-original-placeholder') || el.placeholder;
+        if (!el.hasAttribute('data-original-placeholder')) {
+          el.setAttribute('data-original-placeholder', originalPlaceholder);
+        }
+
+        if (translations[lang][originalPlaceholder]) {
+          el.placeholder = translations[lang][originalPlaceholder];
+        } else if (lang === 'en') {
+          el.placeholder = el.getAttribute('data-original-placeholder');
+        }
+      }
+    });
+  }
+
+  document.getElementById('language-switcher').addEventListener('change', e => {
+    translatePage(e.target.value);
+  });
+</script>
+
   </body>
 </html>
