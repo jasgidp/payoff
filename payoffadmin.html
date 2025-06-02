@@ -48,6 +48,11 @@
         <path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h6a2 2 0 012 2v1" />
       </svg>
     </a>
+
+      <select id="language-switcher" class="border border-[#cedbe8] rounded px-2 py-1 text-sm">
+        <option value="en">🇺🇸 English</option>
+        <option value="pt">🇧🇷 Português</option>
+      </select>
   
     <!-- Notifications Icon -->
     <button class="relative" aria-label="Notifications">
@@ -492,5 +497,86 @@
         </div>
       </div>
     </div>
+
+
+    <script>
+        const translations = {
+          pt: {
+            'Add Debt': 'Registrar Dívida',
+            'Plan': 'Plano',
+            'Education': 'Educação',
+            'Admin': 'Administração',
+            'Logout': 'Sair',
+            'Hi,': 'Olá,',
+            'Dashboard': 'Painel de Controle',
+            'Overview of app performance and user engagement': 'Visão geral do desempenho do app e engajamento dos usuários',
+            'Active Users': 'Usuários Ativos',
+            'Average Debt Payoff': 'Percentual Médio de Quitação',
+            'Weekly Usage': 'Uso Semanal',
+            'Last 7 Days': 'Últimos 7 Dias',
+            'Monthly Usage': 'Uso Mensal',
+            'Last 30 Days': 'Últimos 30 Dias',
+            'User Growth': 'Crescimento de Usuários',
+            'Last 12 Months': 'Últimos 12 Meses',
+            'Educational Tracks Completed': 'Trilhas Educativas Concluídas',
+            'User Feedback': 'Feedback dos Usuários',
+            'All': 'Todos',
+            'Positive': 'Positivos',
+            'Negative': 'Negativos',
+            'The app has been incredibly helpful in managing my finances and paying off my debt. Highly recommend!':
+              'O app tem sido incrivelmente útil para gerenciar minhas finanças e quitar minhas dívidas. Altamente recomendado!',
+            'Great app with useful features, but could use some improvements in the user interface.':
+              'Ótimo app com recursos úteis, mas poderia melhorar a interface de usuário.',
+            "I've had some issues with the app crashing and not saving my progress. Needs more stability.":
+              'Tive alguns problemas com o app travando e não salvando meu progresso. Precisa de mais estabilidade.',
+            'Send Announcement': 'Enviar Comunicado',
+            'Add New Educational Content': 'Adicionar Novo Conteúdo Educacional',
+            'Content Title': 'Título do Conteúdo',
+            'Content Description': 'Descrição do Conteúdo',
+            'Add Content': 'Adicionar Conteúdo',
+            'Register Debt': 'Registrar Dívida',
+            'Payoff Plan': 'Plano de Quitação',
+            'Financial Education': 'Educação Financeira',
+            'Admin Dashboard': 'Painel Administrativo',
+            'Type your announcement here': 'Escreva seu comunicado aqui',
+          },
+          en: {} // opcional si luego quieres volver al inglés
+        };
+      
+        function translatePage(lang) {
+          document.querySelectorAll('body *').forEach(el => {
+            if (el.children.length === 0 && el.textContent.trim()) {
+              const original = el.getAttribute('data-original') || el.textContent.trim();
+              if (!el.getAttribute('data-original')) {
+                el.setAttribute('data-original', original);
+              }
+      
+              if (translations[lang] && translations[lang][original]) {
+                el.textContent = translations[lang][original];
+              } else if (lang === 'en') {
+                el.textContent = el.getAttribute('data-original');
+              }
+            }
+      
+            // también traducimos placeholder
+            if (el.placeholder) {
+              const orig = el.getAttribute('data-original-placeholder') || el.placeholder;
+              if (!el.getAttribute('data-original-placeholder')) {
+                el.setAttribute('data-original-placeholder', orig);
+              }
+              if (translations[lang][orig]) {
+                el.placeholder = translations[lang][orig];
+              } else if (lang === 'en') {
+                el.placeholder = el.getAttribute('data-original-placeholder');
+              }
+            }
+          });
+        }
+      
+        document.getElementById('language-switcher').addEventListener('change', e => {
+          translatePage(e.target.value);
+        });
+      </script>
+      
   </body>
 </html>
