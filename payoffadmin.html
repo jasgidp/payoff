@@ -1,569 +1,619 @@
 <!DOCTYPE html>
 <html lang="pt">
-  <head>
-    <meta charset="UTF-8" />
-    <title>✔ Pay Off</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-    <link
-      rel="stylesheet"
-      as="style"
-      onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&family=Manrope:wght@400;500;700;800&family=Noto+Sans:wght@400;500;700;900"
-    />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script>
-      function toggleMenu() {
-        const menu = document.getElementById('mobile-menu');
-        menu.classList.toggle('hidden');
-      }
-    </script>
-  </head>
-  <body class="bg-white min-h-screen" style="font-family: Manrope, 'Noto Sans', sans-serif;">
-    <header class="bg-white border-b border-[#cedbe8]">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16 items-center">
-          <!-- Logo -->
-          <div class="flex-shrink-0">
-            <h1 class="text-2xl font-extrabold text-[#0d141c]">
-                <span class="text-blue-600">✔ Pay Off</span> 
-            </h1>
-          </div>
-                <select id="language-switcher" class="border border-[#cedbe8] rounded px-2 py-1 text-sm">
-        <option value="en">🇺🇸 English</option>
-        <option value="pt">🇧🇷 Português</option>
-      </select>
-          <!-- Desktop Menu -->
-<div class="hidden md:flex space-x-6 items-center">
-    <!-- Home Icon -->
-    <a href="payoffdashboard.html" class="text-[#0d141c]" aria-label="Home">
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l9-9 9 9M4 10v10a1 1 0 001 1h3m10-11v10a1 1 0 01-1 1h-3" />
-      </svg>
-    </a>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>✔ Pay Off</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+  <link rel="stylesheet" as="style" onload="this.rel='stylesheet'"
+    href="https://fonts.googleapis.com/css2?display=swap&family=Manrope:wght@400;500;700;800&family=Noto+Sans:wght@400;500;700;900" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
+</head>
+
+<body class="bg-white min-h-screen" style="font-family: Manrope, 'Noto Sans', sans-serif;">
   
-    <a href="payoffdebt.html" class="text-[#0d141c] text-sm font-medium">Add Debt</a>
-    <a href="payoffPlan.html" class="text-[#0d141c] text-sm font-medium">Plan</a>
-    <a href="payofflearning.html" class="text-[#0d141c] text-sm font-medium">Education</a>
-    <a href="payoffadmin.html" class="text-[#0d141c] text-sm font-medium">Admin</a>
-  
-    <!-- Logout Icon -->
-    <a href="index.html" class="text-[#0d141c]" aria-label="Logout">
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h6a2 2 0 012 2v1" />
-      </svg>
-    </a>
+  <header class="bg-white border-b border-[#cedbe8]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <h1 class="text-2xl font-extrabold text-[#0d141c]">
+            <span class="text-blue-600">✔ Pay Off</span>
+          </h1>
+        </div>
+        <select id="language-switcher" class="border border-[#cedbe8] rounded px-2 py-1 text-sm">
+          <option value="en">🇺🇸 English</option>
+          <option value="pt">🇧🇷 Português</option>
+        </select>
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-6 items-center">
+          <!-- Home Icon -->
+          <a href="payoffdashboard.html" class="text-[#0d141c]" aria-label="Home">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 12l9-9 9 9M4 10v10a1 1 0 001 1h3m10-11v10a1 1 0 01-1 1h-3" />
+            </svg>
+          </a>
+
+          <a href="payoffdebt.html" class="text-[#0d141c] text-sm font-medium">Add Debt</a>
+          <a href="payoffPlan.html" class="text-[#0d141c] text-sm font-medium">Plan</a>
+          <a href="payoffgoals.html" class="text-[#0d141c] text-sm font-medium">Goals</a>
+          <a href="payofflearning.html" class="text-[#0d141c] text-sm font-medium">Education</a>
+          <a href="payoffadmin.html" class="text-[#0d141c] text-sm font-medium">Admin</a>
+
+          <!-- Logout Icon -->
+          <a href="index.html" class="text-[#0d141c]" aria-label="Logout">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h6a2 2 0 012 2v1" />
+            </svg>
+          </a>
 
 
-  
-    <!-- Notifications Icon -->
-    <button class="relative" aria-label="Notifications">
-      <span class="absolute -top-1 -right-1 inline-block w-2 h-2 bg-red-500 rounded-full"></span>
-      <svg class="w-5 h-5 text-[#0d141c]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-      </svg>
-    </button>
-            <div class="flex items-center space-x-2">
-              <span class="text-sm text-[#0d141c] font-medium">Hi, Jonathan</span>
-              <div
-                class="w-8 h-8 rounded-full bg-center bg-cover"
-                style="background-image: url('https://lh3.googleusercontent.com/a-/profile');"
-              ></div>
-            </div>
-          </div>
-
-          <!-- Mobile menu button -->
-          <div class="md:hidden flex items-center">
-            <button onclick="toggleMenu()" class="text-[#0d141c] focus:outline-none">
-              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
+          <!-- Award Icon Button -->
+          <!-- Award Icon Button -->
+          <!-- Notifications Icon -->
+          <button class="relative" aria-label="Notifications">
+            <span class="absolute -top-1 -right-1 inline-block w-2 h-2 bg-red-500 rounded-full"></span>
+            <svg class="w-5 h-5 text-[#0d141c]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+            </svg>
+          </button>
+          <div class="flex items-center space-x-2">
+            <span class="text-sm text-[#0d141c] font-medium">Hi, Jonathan</span>
+            <div class="w-8 h-8 rounded-full bg-center bg-cover"
+              style="background-image: url('https://lh3.googleusercontent.com/a-/profile');"></div>
           </div>
         </div>
-      </div>
 
-      <!-- Mobile Menu -->
-      <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
-        <a href="payoffdashboard.html" class="block text-[#0d141c] text-sm font-medium">Home</a>
-        <a href="payoffdebt.html" class="block text-[#0d141c] text-sm font-medium">Register Debt</a>
-        <a href="payoffPlan.html" class="block text-[#0d141c] text-sm font-medium">Payoff Plan</a>
-        <a href="payofflearning.html" class="block text-[#0d141c] text-sm font-medium">Financial Education</a>
-        <a href="payoffadmin.html" class="block text-[#0d141c] text-sm font-medium">Admin Dashboard</a>
-        <a href="index.html" class="block text-[#0d141c] text-sm font-medium">Logout</a>
-      </div>
-    </header>
-        <div class="px-40 flex flex-1 justify-center py-5">
-          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-            <div class="flex flex-wrap justify-between gap-3 p-4">
-              <div class="flex min-w-72 flex-col gap-3">
-                <p class="text-[#111418] tracking-light text-[32px] font-bold leading-tight">Dashboard</p>
-                <p class="text-[#60758a] text-sm font-normal leading-normal">Overview of app performance and user engagement</p>
-              </div>
-            </div>
-            <div class="flex flex-wrap gap-4 p-4">
-              <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-6 bg-[#f0f2f5]">
-                <p class="text-[#111418] text-base font-medium leading-normal">Active Users</p>
-                <p class="text-[#111418] tracking-light text-2xl font-bold leading-tight">1,234</p>
-              </div>
-            </div>
-            <div class="flex flex-wrap gap-4 p-4">
-              <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-6 border border-[#dbe0e6]">
-                <p class="text-[#111418] text-base font-medium leading-normal">Average Debt Payoff</p>
-                <p class="text-[#111418] tracking-light text-2xl font-bold leading-tight">45%</p>
-              </div>
-            </div>
-            <div class="flex flex-wrap gap-4 px-4 py-6">
-              <div class="flex min-w-72 flex-1 flex-col gap-2 rounded-xl border border-[#dbe0e6] p-6">
-                <p class="text-[#111418] text-base font-medium leading-normal">Weekly Usage</p>
-                <p class="text-[#111418] tracking-light text-[32px] font-bold leading-tight truncate">+12%</p>
-                <div class="flex gap-1">
-                  <p class="text-[#60758a] text-base font-normal leading-normal">Last 7 Days</p>
-                  <p class="text-[#078838] text-base font-medium leading-normal">+12%</p>
-                </div>
-                <div class="grid min-h-[180px] grid-flow-col gap-6 grid-rows-[1fr_auto] items-end justify-items-center px-3">
-                  <div class="border-[#60758a] bg-[#f0f2f5] border-t-2 w-full" style="height: 100%;"></div>
-                  <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Mon</p>
-                  <div class="border-[#60758a] bg-[#f0f2f5] border-t-2 w-full" style="height: 20%;"></div>
-                  <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Tue</p>
-                  <div class="border-[#60758a] bg-[#f0f2f5] border-t-2 w-full" style="height: 30%;"></div>
-                  <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Wed</p>
-                  <div class="border-[#60758a] bg-[#f0f2f5] border-t-2 w-full" style="height: 50%;"></div>
-                  <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Thu</p>
-                  <div class="border-[#60758a] bg-[#f0f2f5] border-t-2 w-full" style="height: 10%;"></div>
-                  <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Fri</p>
-                  <div class="border-[#60758a] bg-[#f0f2f5] border-t-2 w-full" style="height: 50%;"></div>
-                  <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Sat</p>
-                  <div class="border-[#60758a] bg-[#f0f2f5] border-t-2 w-full" style="height: 60%;"></div>
-                  <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Sun</p>
-                </div>
-              </div>
-              
-              <div class="flex min-w-72 flex-1 flex-col gap-2 rounded-xl border border-[#dbe0e6] p-6">
-                <p class="text-[#111418] text-base font-medium leading-normal">User Growth</p>
-                <p class="text-[#111418] tracking-light text-[32px] font-bold leading-tight truncate">+5%</p>
-                <div class="flex gap-1">
-                  <p class="text-[#60758a] text-base font-normal leading-normal">Last 12 Months</p>
-                  <p class="text-[#078838] text-base font-medium leading-normal">+5%</p>
-                </div>
-                <div class="flex min-h-[180px] flex-1 flex-col gap-8 py-4">
-                  <svg width="100%" height="148" viewBox="-3 0 478 150" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                    <path
-                      d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H326.769H0V109Z"
-                      fill="url(#paint0_linear_1131_5935)"
-                    ></path>
-                    <path
-                      d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25"
-                      stroke="#60758a"
-                      stroke-width="3"
-                      stroke-linecap="round"
-                    ></path>
-                    <defs>
-                      <linearGradient id="paint0_linear_1131_5935" x1="236" y1="1" x2="236" y2="149" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#f0f2f5"></stop>
-                        <stop offset="1" stop-color="#f0f2f5" stop-opacity="0"></stop>
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                  <div class="flex justify-around">
-                    <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Jan</p>
-                    <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Feb</p>
-                    <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Mar</p>
-                    <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Apr</p>
-                    <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">May</p>
-                    <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Jun</p>
-                    <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Jul</p>
-                    <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Aug</p>
-                    <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Sep</p>
-                    <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Oct</p>
-                    <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Nov</p>
-                    <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Dec</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Engagement</h2>
-            <div class="flex flex-wrap gap-4 p-4">
-              <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-6 border border-[#dbe0e6]">
-                <p class="text-[#111418] text-base font-medium leading-normal">Educational Tracks Completed</p>
-                <p class="text-[#111418] tracking-light text-2xl font-bold leading-tight">567</p>
-              </div>
-            </div>
-            <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">User Feedback</h2>
-            <div class="flex gap-3 p-3 flex-wrap pr-4">
-              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-[#f0f2f5] pl-4 pr-4">
-                <p class="text-[#111418] text-sm font-medium leading-normal">All</p>
-              </div>
-              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-[#f0f2f5] pl-4 pr-4">
-                <p class="text-[#111418] text-sm font-medium leading-normal">Positive</p>
-              </div>
-              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-[#f0f2f5] pl-4 pr-4">
-                <p class="text-[#111418] text-sm font-medium leading-normal">Negative</p>
-              </div>
-            </div>
-            <div class="flex flex-col gap-8 overflow-x-hidden bg-white p-4">
-              <div class="flex flex-col gap-3 bg-white">
-                <div class="flex items-center gap-3">
-                  <div
-                    class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBYhHSdTIUTkf-LU_FwutDAKl3G040UQLZNOnPt0ys_8SXD0PrBnAQro6EtiLACzUhZUYeNR9gMykdabM4da40OCVwswBlg0Esds9M1z9pD81GgYy74pUDxuoE9oYLecw4haZF49fK0UIFFX5075R9EH9cQqAk3u9LkuZHWYCkpouR2qKYEnk5sO8ykdsaBeiMmZlqDpiYCvwcC4wqpX2Tbpz7FJVtVw9iOb9--Lut0k-hExXdIu4eYYcM0x_3ABoijGGm1bgQ4KHY");'
-                  ></div>
-                  <div class="flex-1">
-                    <p class="text-[#111418] text-base font-medium leading-normal">Sophia Clark</p>
-                    <p class="text-[#60758a] text-sm font-normal leading-normal">2 weeks ago</p>
-                  </div>
-                </div>
-                <div class="flex gap-0.5">
-                  <div class="text-[#111418]" data-icon="Star" data-size="20px" data-weight="fill">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                      <path
-                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div class="text-[#111418]" data-icon="Star" data-size="20px" data-weight="fill">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                      <path
-                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div class="text-[#111418]" data-icon="Star" data-size="20px" data-weight="fill">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                      <path
-                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div class="text-[#111418]" data-icon="Star" data-size="20px" data-weight="fill">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                      <path
-                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div class="text-[#111418]" data-icon="Star" data-size="20px" data-weight="fill">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                      <path
-                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
-                      ></path>
-                    </svg>
-                  </div>
-                </div>
-                <p class="text-[#111418] text-base font-normal leading-normal">
-                  The app has been incredibly helpful in managing my finances and paying off my debt. Highly recommend!
-                </p>
-                <div class="flex gap-9 text-[#60758a]">
-                  <button class="flex items-center gap-2">
-                    <div class="text-inherit" data-icon="ThumbsUp" data-size="20px" data-weight="regular">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                        <path
-                          d="M234,80.12A24,24,0,0,0,216,72H160V56a40,40,0,0,0-40-40,8,8,0,0,0-7.16,4.42L75.06,96H32a16,16,0,0,0-16,16v88a16,16,0,0,0,16,16H204a24,24,0,0,0,23.82-21l12-96A24,24,0,0,0,234,80.12ZM32,112H72v88H32ZM223.94,97l-12,96a8,8,0,0,1-7.94,7H88V105.89l36.71-73.43A24,24,0,0,1,144,56V80a8,8,0,0,0,8,8h64a8,8,0,0,1,7.94,9Z"
-                        ></path>
-                      </svg>
-                    </div>
-                    <p class="text-inherit">12</p>
-                  </button>
-                  <button class="flex items-center gap-2">
-                    <div class="text-inherit" data-icon="ThumbsDown" data-size="20px" data-weight="regular">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                        <path
-                          d="M239.82,157l-12-96A24,24,0,0,0,204,40H32A16,16,0,0,0,16,56v88a16,16,0,0,0,16,16H75.06l37.78,75.58A8,8,0,0,0,120,240a40,40,0,0,0,40-40V184h56a24,24,0,0,0,23.82-27ZM72,144H32V56H72Zm150,21.29a7.88,7.88,0,0,1-6,2.71H152a8,8,0,0,0-8,8v24a24,24,0,0,1-19.29,23.54L88,150.11V56H204a8,8,0,0,1,7.94,7l12,96A7.87,7.87,0,0,1,222,165.29Z"
-                        ></path>
-                      </svg>
-                    </div>
-                    <p class="text-inherit">2</p>
-                  </button>
-                </div>
-              </div>
-              <div class="flex flex-col gap-3 bg-white">
-                <div class="flex items-center gap-3">
-                  <div
-                    class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB23HBr1E-ScUinGiuT3Wu4DvlFSKsn8BeEyQXVx_pSNDS_6EWHRyW8wBK1B00Vyxg4SPNArx2Hb7bDVHIT9GuBS34o6RKfod96cy9vIbpbL-HftyE6IiFgwdZP11RHSN2meYWMrwh_zhUso43QgVaOgPgM3PV5WSGWc9UfWN0ds3dbEXxYLHsif6imMn6gvKfFzNh1jS77UW8ljbMlX9zuzTcieY2AnwC0fHjfxwoN18H096y-LtE20JSN9VLzAu-ZjYtXeMTkKoE");'
-                  ></div>
-                  <div class="flex-1">
-                    <p class="text-[#111418] text-base font-medium leading-normal">Ethan Miller</p>
-                    <p class="text-[#60758a] text-sm font-normal leading-normal">1 month ago</p>
-                  </div>
-                </div>
-                <div class="flex gap-0.5">
-                  <div class="text-[#111418]" data-icon="Star" data-size="20px" data-weight="fill">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                      <path
-                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div class="text-[#111418]" data-icon="Star" data-size="20px" data-weight="fill">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                      <path
-                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div class="text-[#111418]" data-icon="Star" data-size="20px" data-weight="fill">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                      <path
-                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div class="text-[#111418]" data-icon="Star" data-size="20px" data-weight="fill">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                      <path
-                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div class="text-[#bac4cf]" data-icon="Star" data-size="20px" data-weight="regular">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                      <path
-                        d="M239.2,97.29a16,16,0,0,0-13.81-11L166,81.17,142.72,25.81h0a15.95,15.95,0,0,0-29.44,0L90.07,81.17,30.61,86.32a16,16,0,0,0-9.11,28.06L66.61,153.8,53.09,212.34a16,16,0,0,0,23.84,17.34l51-31,51.11,31a16,16,0,0,0,23.84-17.34l-13.51-58.6,45.1-39.36A16,16,0,0,0,239.2,97.29Zm-15.22,5-45.1,39.36a16,16,0,0,0-5.08,15.71L187.35,216v0l-51.07-31a15.9,15.9,0,0,0-16.54,0l-51,31h0L82.2,157.4a16,16,0,0,0-5.08-15.71L32,102.35a.37.37,0,0,1,0-.09l59.44-5.14a16,16,0,0,0,13.35-9.75L128,32.08l23.2,55.29a16,16,0,0,0,13.35,9.75L224,102.26S224,102.32,224,102.33Z"
-                      ></path>
-                    </svg>
-                  </div>
-                </div>
-                <p class="text-[#111418] text-base font-normal leading-normal">Great app with useful features, but could use some improvements in the user interface.</p>
-                <div class="flex gap-9 text-[#60758a]">
-                  <button class="flex items-center gap-2">
-                    <div class="text-inherit" data-icon="ThumbsUp" data-size="20px" data-weight="regular">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                        <path
-                          d="M234,80.12A24,24,0,0,0,216,72H160V56a40,40,0,0,0-40-40,8,8,0,0,0-7.16,4.42L75.06,96H32a16,16,0,0,0-16,16v88a16,16,0,0,0,16,16H204a24,24,0,0,0,23.82-21l12-96A24,24,0,0,0,234,80.12ZM32,112H72v88H32ZM223.94,97l-12,96a8,8,0,0,1-7.94,7H88V105.89l36.71-73.43A24,24,0,0,1,144,56V80a8,8,0,0,0,8,8h64a8,8,0,0,1,7.94,9Z"
-                        ></path>
-                      </svg>
-                    </div>
-                    <p class="text-inherit">8</p>
-                  </button>
-                  <button class="flex items-center gap-2">
-                    <div class="text-inherit" data-icon="ThumbsDown" data-size="20px" data-weight="regular">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                        <path
-                          d="M239.82,157l-12-96A24,24,0,0,0,204,40H32A16,16,0,0,0,16,56v88a16,16,0,0,0,16,16H75.06l37.78,75.58A8,8,0,0,0,120,240a40,40,0,0,0,40-40V184h56a24,24,0,0,0,23.82-27ZM72,144H32V56H72Zm150,21.29a7.88,7.88,0,0,1-6,2.71H152a8,8,0,0,0-8,8v24a24,24,0,0,1-19.29,23.54L88,150.11V56H204a8,8,0,0,1,7.94,7l12,96A7.87,7.87,0,0,1,222,165.29Z"
-                        ></path>
-                      </svg>
-                    </div>
-                    <p class="text-inherit">1</p>
-                  </button>
-                </div>
-              </div>
-              <div class="flex flex-col gap-3 bg-white">
-                <div class="flex items-center gap-3">
-                  <div
-                    class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDEkYYdXHPvyzLMvzuHG75HrphjksCVFclNIy5jpe9oClDx7A7wO2MCdZJ8VcWE73XtP4sxuqdI1eUlTtbJef4QsHGOOjS7E-gM9n_ECuRRyZgpqOqc6hpJQ-Wvi0YCqRm5HMzv86wKaDv6pp3Ak-ZfBn32aQheYCsah7ig3tvrCT6uyyW3pGts7Fd2AOVonBykW4RB0x-J4dz6QrnXoXerFF7pdEk46AKXO4cI91zdoZ_HHgQEjpKmDINKLl5fce8DmSGdP8Bhtis");'
-                  ></div>
-                  <div class="flex-1">
-                    <p class="text-[#111418] text-base font-medium leading-normal">Olivia Davis</p>
-                    <p class="text-[#60758a] text-sm font-normal leading-normal">2 months ago</p>
-                  </div>
-                </div>
-                <div class="flex gap-0.5">
-                  <div class="text-[#111418]" data-icon="Star" data-size="20px" data-weight="fill">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                      <path
-                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div class="text-[#111418]" data-icon="Star" data-size="20px" data-weight="fill">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                      <path
-                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div class="text-[#bac4cf]" data-icon="Star" data-size="20px" data-weight="regular">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                      <path
-                        d="M239.2,97.29a16,16,0,0,0-13.81-11L166,81.17,142.72,25.81h0a15.95,15.95,0,0,0-29.44,0L90.07,81.17,30.61,86.32a16,16,0,0,0-9.11,28.06L66.61,153.8,53.09,212.34a16,16,0,0,0,23.84,17.34l51-31,51.11,31a16,16,0,0,0,23.84-17.34l-13.51-58.6,45.1-39.36A16,16,0,0,0,239.2,97.29Zm-15.22,5-45.1,39.36a16,16,0,0,0-5.08,15.71L187.35,216v0l-51.07-31a15.9,15.9,0,0,0-16.54,0l-51,31h0L82.2,157.4a16,16,0,0,0-5.08-15.71L32,102.35a.37.37,0,0,1,0-.09l59.44-5.14a16,16,0,0,0,13.35-9.75L128,32.08l23.2,55.29a16,16,0,0,0,13.35,9.75L224,102.26S224,102.32,224,102.33Z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div class="text-[#bac4cf]" data-icon="Star" data-size="20px" data-weight="regular">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                      <path
-                        d="M239.2,97.29a16,16,0,0,0-13.81-11L166,81.17,142.72,25.81h0a15.95,15.95,0,0,0-29.44,0L90.07,81.17,30.61,86.32a16,16,0,0,0-9.11,28.06L66.61,153.8,53.09,212.34a16,16,0,0,0,23.84,17.34l51-31,51.11,31a16,16,0,0,0,23.84-17.34l-13.51-58.6,45.1-39.36A16,16,0,0,0,239.2,97.29Zm-15.22,5-45.1,39.36a16,16,0,0,0-5.08,15.71L187.35,216v0l-51.07-31a15.9,15.9,0,0,0-16.54,0l-51,31h0L82.2,157.4a16,16,0,0,0-5.08-15.71L32,102.35a.37.37,0,0,1,0-.09l59.44-5.14a16,16,0,0,0,13.35-9.75L128,32.08l23.2,55.29a16,16,0,0,0,13.35,9.75L224,102.26S224,102.32,224,102.33Z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div class="text-[#bac4cf]" data-icon="Star" data-size="20px" data-weight="regular">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                      <path
-                        d="M239.2,97.29a16,16,0,0,0-13.81-11L166,81.17,142.72,25.81h0a15.95,15.95,0,0,0-29.44,0L90.07,81.17,30.61,86.32a16,16,0,0,0-9.11,28.06L66.61,153.8,53.09,212.34a16,16,0,0,0,23.84,17.34l51-31,51.11,31a16,16,0,0,0,23.84-17.34l-13.51-58.6,45.1-39.36A16,16,0,0,0,239.2,97.29Zm-15.22,5-45.1,39.36a16,16,0,0,0-5.08,15.71L187.35,216v0l-51.07-31a15.9,15.9,0,0,0-16.54,0l-51,31h0L82.2,157.4a16,16,0,0,0-5.08-15.71L32,102.35a.37.37,0,0,1,0-.09l59.44-5.14a16,16,0,0,0,13.35-9.75L128,32.08l23.2,55.29a16,16,0,0,0,13.35,9.75L224,102.26S224,102.32,224,102.33Z"
-                      ></path>
-                    </svg>
-                  </div>
-                </div>
-                <p class="text-[#111418] text-base font-normal leading-normal">I've had some issues with the app crashing and not saving my progress. Needs more stability.</p>
-                <div class="flex gap-9 text-[#60758a]">
-                  <button class="flex items-center gap-2">
-                    <div class="text-inherit" data-icon="ThumbsUp" data-size="20px" data-weight="regular">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                        <path
-                          d="M234,80.12A24,24,0,0,0,216,72H160V56a40,40,0,0,0-40-40,8,8,0,0,0-7.16,4.42L75.06,96H32a16,16,0,0,0-16,16v88a16,16,0,0,0,16,16H204a24,24,0,0,0,23.82-21l12-96A24,24,0,0,0,234,80.12ZM32,112H72v88H32ZM223.94,97l-12,96a8,8,0,0,1-7.94,7H88V105.89l36.71-73.43A24,24,0,0,1,144,56V80a8,8,0,0,0,8,8h64a8,8,0,0,1,7.94,9Z"
-                        ></path>
-                      </svg>
-                    </div>
-                    <p class="text-inherit">3</p>
-                  </button>
-                  <button class="flex items-center gap-2">
-                    <div class="text-inherit" data-icon="ThumbsDown" data-size="20px" data-weight="regular">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                        <path
-                          d="M239.82,157l-12-96A24,24,0,0,0,204,40H32A16,16,0,0,0,16,56v88a16,16,0,0,0,16,16H75.06l37.78,75.58A8,8,0,0,0,120,240a40,40,0,0,0,40-40V184h56a24,24,0,0,0,23.82-27ZM72,144H32V56H72Zm150,21.29a7.88,7.88,0,0,1-6,2.71H152a8,8,0,0,0-8,8v24a24,24,0,0,1-19.29,23.54L88,150.11V56H204a8,8,0,0,1,7.94,7l12,96A7.87,7.87,0,0,1,222,165.29Z"
-                        ></path>
-                      </svg>
-                    </div>
-                    <p class="text-inherit">5</p>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Announcements</h2>
-            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-              <label class="flex flex-col min-w-40 flex-1">
-                <textarea
-                  placeholder="Type your announcement here"
-                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#111418] focus:outline-0 focus:ring-0 border border-[#dbe0e6] bg-white focus:border-[#dbe0e6] min-h-36 placeholder:text-[#60758a] p-[15px] text-base font-normal leading-normal"
-                ></textarea>
-              </label>
-            </div>
-            <div class="flex px-4 py-3 justify-end">
-              <button
-                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#0c7ff2] text-white text-sm font-bold leading-normal tracking-[0.015em]"
-              >
-                <span class="truncate">Send Announcement</span>
-              </button>
-            </div>
-            <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Add New Educational Content</h2>
-            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-              <label class="flex flex-col min-w-40 flex-1">
-                <input
-                  placeholder="Content Title"
-                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#111418] focus:outline-0 focus:ring-0 border border-[#dbe0e6] bg-white focus:border-[#dbe0e6] h-14 placeholder:text-[#60758a] p-[15px] text-base font-normal leading-normal"
-                  value=""
-                />
-              </label>
-            </div>
-            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-              <label class="flex flex-col min-w-40 flex-1">
-                <textarea
-                  placeholder="Content Description"
-                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#111418] focus:outline-0 focus:ring-0 border border-[#dbe0e6] bg-white focus:border-[#dbe0e6] min-h-36 placeholder:text-[#60758a] p-[15px] text-base font-normal leading-normal"
-                ></textarea>
-              </label>
-            </div>
-            <div class="flex px-4 py-3 justify-end">
-              <button
-                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#0c7ff2] text-white text-sm font-bold leading-normal tracking-[0.015em]"
-              >
-                <span class="truncate">Add Content</span>
-              </button>
-            </div>
-          </div>
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+          <button onclick="toggleMenu()" class="text-[#0d141c] focus:outline-none">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
         </div>
       </div>
     </div>
 
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+      <a href="payoffdashboard.html" class="block text-[#0d141c] text-sm font-medium">Home</a>
+      <a href="payoffdebt.html" class="block text-[#0d141c] text-sm font-medium">Register Debt</a>
+      <a href="payoffPlan.html" class="block text-[#0d141c] text-sm font-medium">Payoff Plan</a>
+      <a href="payoffgoals.html" class="text-[#0d141c] text-sm font-medium">Goals</a>
+      <a href="payofflearning.html" class="block text-[#0d141c] text-sm font-medium">Financial Education</a>
+      <a href="payoffadmin.html" class="block text-[#0d141c] text-sm font-medium">Admin Dashboard</a>
+      <a href="index.html" class="block text-[#0d141c] text-sm font-medium">Logout</a>
+    </div>
+  </header>
 
-    <script>
-        const translations = {
-          pt: {
-                "Jan": "Jan",
-    "Feb": "Fev",
-    "Mar": "Mar",
-    "Apr": "Abr",
-    "May": "Mai",
-    "Jun": "Jun",
-    "Jul": "Jul",
-    "Aug": "Ago",
-    "Sep": "Set",
-    "Oct": "Out",
-    "Nov": "Nov",
-    "Dec": "Dez",
-                "Mon": "Seg",
-    "Tue": "Ter",
-    "Wed": "Qua",
-    "Thu": "Qui",
-    "Fri": "Sex",
-    "Sat": "Sáb",
-    "Sun": "Dom",
-            'Add Debt': 'Registrar Dívida',
-            'Plan': 'Plano',
-            'Education': 'Educação',
-            'Admin': 'Administração',
-            'Logout': 'Sair',
-            'Hi,': 'Olá,',
-            'Dashboard': 'Painel de Controle',
-            'Overview of app performance and user engagement': 'Visão geral do desempenho do app e engajamento dos usuários',
-            'Active Users': 'Usuários Ativos',
-            'Average Debt Payoff': 'Percentual Médio de Quitação',
-            'Weekly Usage': 'Uso Semanal',
-            'Last 7 Days': 'Últimos 7 Dias',
-            'Monthly Usage': 'Uso Mensal',
-            'Last 30 Days': 'Últimos 30 Dias',
-            'User Growth': 'Crescimento de Usuários',
-            'Last 12 Months': 'Últimos 12 Meses',
-            'Educational Tracks Completed': 'Trilhas Educativas Concluídas',
-            'User Feedback': 'Feedback dos Usuários',
-            'All': 'Todos',
-            'Positive': 'Positivos',
-            'Negative': 'Negativos',
-            'The app has been incredibly helpful in managing my finances and paying off my debt. Highly recommend!':
-              'O app tem sido incrivelmente útil para gerenciar minhas finanças e quitar minhas dívidas. Altamente recomendado!',
-            'Great app with useful features, but could use some improvements in the user interface.':
-              'Ótimo app com recursos úteis, mas poderia melhorar a interface de usuário.',
-            "I've had some issues with the app crashing and not saving my progress. Needs more stability.":
-              'Tive alguns problemas com o app travando e não salvando meu progresso. Precisa de mais estabilidade.',
-            'Send Announcement': 'Enviar Comunicado',
-            'Add New Educational Content': 'Adicionar Novo Conteúdo Educacional',
-            'Content Title': 'Título do Conteúdo',
-            'Content Description': 'Descrição do Conteúdo',
-            'Add Content': 'Adicionar Conteúdo',
-            'Register Debt': 'Registrar Dívida',
-            'Payoff Plan': 'Plano de Quitação',
-            'Financial Education': 'Educação Financeira',
-            'Admin Dashboard': 'Painel Administrativo',
-            'Type your announcement here': 'Escreva seu comunicado aqui',
-          },
-          en: {} // opcional si luego quieres volver al inglés
-        };
-      
-        function translatePage(lang) {
-          document.querySelectorAll('body *').forEach(el => {
-            if (el.children.length === 0 && el.textContent.trim()) {
-              const original = el.getAttribute('data-original') || el.textContent.trim();
-              if (!el.getAttribute('data-original')) {
-                el.setAttribute('data-original', original);
-              }
-      
-              if (translations[lang] && translations[lang][original]) {
-                el.textContent = translations[lang][original];
-              } else if (lang === 'en') {
-                el.textContent = el.getAttribute('data-original');
-              }
-            }
-      
-            // también traducimos placeholder
-            if (el.placeholder) {
-              const orig = el.getAttribute('data-original-placeholder') || el.placeholder;
-              if (!el.getAttribute('data-original-placeholder')) {
-                el.setAttribute('data-original-placeholder', orig);
-              }
-              if (translations[lang][orig]) {
-                el.placeholder = translations[lang][orig];
-              } else if (lang === 'en') {
-                el.placeholder = el.getAttribute('data-original-placeholder');
-              }
-            }
-          });
+  <div class="px-40 flex flex-1 justify-center py-5">
+    <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+      <div class="flex flex-wrap justify-between gap-3 p-4">
+        <div class="flex min-w-72 flex-col gap-3">
+          <p class="text-[#111418] tracking-light text-[32px] font-bold leading-tight">Dashboard</p>
+          <p class="text-[#60758a] text-sm font-normal leading-normal">Overview of app performance and user engagement
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-4 p-4">
+        <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-6 bg-[#f0f2f5]">
+          <p class="text-[#111418] text-base font-medium leading-normal">Active Users</p>
+          <p class="text-[#111418] tracking-light text-2xl font-bold leading-tight">1,234</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-4 p-4">
+        <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-6 border border-[#dbe0e6]">
+          <p class="text-[#111418] text-base font-medium leading-normal">Average Debt Payoff</p>
+          <p class="text-[#111418] tracking-light text-2xl font-bold leading-tight">45%</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-4 px-4 py-6">
+        <div class="flex min-w-72 flex-1 flex-col gap-2 rounded-xl border border-[#dbe0e6] p-6">
+          <p class="text-[#111418] text-base font-medium leading-normal">Weekly Usage</p>
+          <p class="text-[#111418] tracking-light text-[32px] font-bold leading-tight truncate">+12%</p>
+          <div class="flex gap-1">
+            <p class="text-[#60758a] text-base font-normal leading-normal">Last 7 Days</p>
+            <p class="text-[#078838] text-base font-medium leading-normal">+12%</p>
+          </div>
+          <div class="grid min-h-[180px] grid-flow-col gap-6 grid-rows-[1fr_auto] items-end justify-items-center px-3">
+            <div class="border-[#60758a] bg-[#f0f2f5] border-t-2 w-full" style="height: 100%;"></div>
+            <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Mon</p>
+            <div class="border-[#60758a] bg-[#f0f2f5] border-t-2 w-full" style="height: 20%;"></div>
+            <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Tue</p>
+            <div class="border-[#60758a] bg-[#f0f2f5] border-t-2 w-full" style="height: 30%;"></div>
+            <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Wed</p>
+            <div class="border-[#60758a] bg-[#f0f2f5] border-t-2 w-full" style="height: 50%;"></div>
+            <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Thu</p>
+            <div class="border-[#60758a] bg-[#f0f2f5] border-t-2 w-full" style="height: 10%;"></div>
+            <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Fri</p>
+            <div class="border-[#60758a] bg-[#f0f2f5] border-t-2 w-full" style="height: 50%;"></div>
+            <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Sat</p>
+            <div class="border-[#60758a] bg-[#f0f2f5] border-t-2 w-full" style="height: 60%;"></div>
+            <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Sun</p>
+          </div>
+        </div>
+
+        <div class="flex min-w-72 flex-1 flex-col gap-2 rounded-xl border border-[#dbe0e6] p-6">
+          <p class="text-[#111418] text-base font-medium leading-normal">User Growth</p>
+          <p class="text-[#111418] tracking-light text-[32px] font-bold leading-tight truncate">+5%</p>
+          <div class="flex gap-1">
+            <p class="text-[#60758a] text-base font-normal leading-normal">Last 12 Months</p>
+            <p class="text-[#078838] text-base font-medium leading-normal">+5%</p>
+          </div>
+          <div class="flex min-h-[180px] flex-1 flex-col gap-8 py-4">
+            <svg width="100%" height="148" viewBox="-3 0 478 150" fill="none" xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="none">
+              <path
+                d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H326.769H0V109Z"
+                fill="url(#paint0_linear_1131_5935)"></path>
+              <path
+                d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25"
+                stroke="#60758a" stroke-width="3" stroke-linecap="round"></path>
+              <defs>
+                <linearGradient id="paint0_linear_1131_5935" x1="236" y1="1" x2="236" y2="149"
+                  gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#f0f2f5"></stop>
+                  <stop offset="1" stop-color="#f0f2f5" stop-opacity="0"></stop>
+                </linearGradient>
+              </defs>
+            </svg>
+            <div class="flex justify-around">
+              <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Jan</p>
+              <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Feb</p>
+              <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Mar</p>
+              <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Apr</p>
+              <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">May</p>
+              <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Jun</p>
+              <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Jul</p>
+              <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Aug</p>
+              <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Sep</p>
+              <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Oct</p>
+              <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Nov</p>
+              <p class="text-[#60758a] text-[13px] font-bold leading-normal tracking-[0.015em]">Dec</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col gap-2 rounded-xl border border-[#dbe0e6] p-6 min-w-72 flex-1">
+        <p class="text-[#111418] text-base font-medium leading-normal">User Retention</p>
+        <p class="text-[#111418] tracking-light text-[32px] font-bold leading-tight truncate">82% Active</p>
+        <div class="flex gap-1">
+          <p class="text-[#60758a] text-base font-normal leading-normal">18% Desisted</p>
+          <p class="text-[#de3b3b] text-base font-medium leading-normal">–18%</p>
+        </div>
+
+        <div class="flex justify-center items-center h-48 relative">
+          <svg viewBox="0 0 36 36" class="w-32 h-32 transform -rotate-90">
+            <!-- Círculo base: usuarios ativos -->
+            <circle cx="18" cy="18" r="16" fill="none" stroke="#0c7ff2" stroke-width="4" stroke-dasharray="100, 100" />
+            <!-- Círculo superior: usuários desistentes -->
+            <circle cx="18" cy="18" r="16" fill="none" stroke="#de3b3b" stroke-width="4" stroke-dasharray="18, 82" />
+          </svg>
+          <!-- Porcentaje al centro -->
+          <span class="absolute text-[#111418] font-bold text-lg">82%</span>
+        </div>
+
+        <div class="flex justify-between px-1">
+          <div class="flex items-center gap-2">
+            <div class="w-3 h-3 bg-[#0c7ff2] rounded-full"></div>
+            <p class="text-sm text-[#60758a]">Active Users</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-3 h-3 bg-[#de3b3b] rounded-full"></div>
+            <p class="text-sm text-[#60758a]">Desisted</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Engagement</h2>
+      <div class="flex flex-wrap gap-4 p-4">
+        <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-6 border border-[#dbe0e6]">
+          <p class="text-[#111418] text-base font-medium leading-normal">Educational Tracks Completed</p>
+          <p class="text-[#111418] tracking-light text-2xl font-bold leading-tight">567</p>
+        </div>
+      </div>
+      <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">User Feedback
+      </h2>
+      <div class="flex gap-3 p-3 flex-wrap pr-4">
+        <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-[#f0f2f5] pl-4 pr-4">
+          <p class="text-[#111418] text-sm font-medium leading-normal">All</p>
+        </div>
+        <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-[#f0f2f5] pl-4 pr-4">
+          <p class="text-[#111418] text-sm font-medium leading-normal">Positive</p>
+        </div>
+        <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-[#f0f2f5] pl-4 pr-4">
+          <p class="text-[#111418] text-sm font-medium leading-normal">Negative</p>
+        </div>
+      </div>
+      <div class="flex flex-col gap-8 overflow-x-hidden bg-white p-4">
+        <div class="flex flex-col gap-3 bg-white">
+          <div class="flex items-center gap-3">
+            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBYhHSdTIUTkf-LU_FwutDAKl3G040UQLZNOnPt0ys_8SXD0PrBnAQro6EtiLACzUhZUYeNR9gMykdabM4da40OCVwswBlg0Esds9M1z9pD81GgYy74pUDxuoE9oYLecw4haZF49fK0UIFFX5075R9EH9cQqAk3u9LkuZHWYCkpouR2qKYEnk5sO8ykdsaBeiMmZlqDpiYCvwcC4wqpX2Tbpz7FJVtVw9iOb9--Lut0k-hExXdIu4eYYcM0x_3ABoijGGm1bgQ4KHY");'>
+            </div>
+            <div class="flex-1">
+              <p class="text-[#111418] text-base font-medium leading-normal">Sophia Clark</p>
+              <p class="text-[#60758a] text-sm font-normal leading-normal">2 weeks ago</p>
+            </div>
+          </div>
+          <div class="flex gap-0.5">
+            <div class="text-[#111418]" data-icon="Star" data-size="20px" data-weight="fill">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor"
+                viewBox="0 0 256 256">
+                <path
+                  d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                </path>
+              </svg>
+            </div>
+            <div class="text-[#111418]" data-icon="Star" data-size="20px" data-weight="fill">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor"
+                viewBox="0 0 256 256">
+                <path
+                  d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                </path>
+              </svg>
+            </div>
+            <div class="text-[#111418]" data-icon="Star" data-size="20px" data-weight="fill">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor"
+                viewBox="0 0 256 256">
+                <path
+                  d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                </path>
+              </svg>
+            </div>
+            <div class="text-[#111418]" data-icon="Star" data-size="20px" data-weight="fill">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor"
+                viewBox="0 0 256 256">
+                <path
+                  d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                </path>
+              </svg>
+            </div>
+            <div class="text-[#111418]" data-icon="Star" data-size="20px" data-weight="fill">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor"
+                viewBox="0 0 256 256">
+                <path
+                  d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                </path>
+              </svg>
+            </div>
+          </div>
+          <p class="text-[#111418] text-base font-normal leading-normal">
+            The app has been incredibly helpful in managing my finances and paying off my debt. Highly recommend!
+          </p>
+          <div class="flex gap-9 text-[#60758a]">
+            <button class="flex items-center gap-2">
+              <div class="text-inherit" data-icon="ThumbsUp" data-size="20px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor"
+                  viewBox="0 0 256 256">
+                  <path
+                    d="M234,80.12A24,24,0,0,0,216,72H160V56a40,40,0,0,0-40-40,8,8,0,0,0-7.16,4.42L75.06,96H32a16,16,0,0,0-16,16v88a16,16,0,0,0,16,16H204a24,24,0,0,0,23.82-21l12-96A24,24,0,0,0,234,80.12ZM32,112H72v88H32ZM223.94,97l-12,96a8,8,0,0,1-7.94,7H88V105.89l36.71-73.43A24,24,0,0,1,144,56V80a8,8,0,0,0,8,8h64a8,8,0,0,1,7.94,9Z">
+                  </path>
+                </svg>
+              </div>
+              <p class="text-inherit">12</p>
+            </button>
+            <button class="flex items-center gap-2">
+              <div class="text-inherit" data-icon="ThumbsDown" data-size="20px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor"
+                  viewBox="0 0 256 256">
+                  <path
+                    d="M239.82,157l-12-96A24,24,0,0,0,204,40H32A16,16,0,0,0,16,56v88a16,16,0,0,0,16,16H75.06l37.78,75.58A8,8,0,0,0,120,240a40,40,0,0,0,40-40V184h56a24,24,0,0,0,23.82-27ZM72,144H32V56H72Zm150,21.29a7.88,7.88,0,0,1-6,2.71H152a8,8,0,0,0-8,8v24a24,24,0,0,1-19.29,23.54L88,150.11V56H204a8,8,0,0,1,7.94,7l12,96A7.87,7.87,0,0,1,222,165.29Z">
+                  </path>
+                </svg>
+              </div>
+              <p class="text-inherit">2</p>
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3 bg-white">
+          <div class="flex items-center gap-3">
+            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB23HBr1E-ScUinGiuT3Wu4DvlFSKsn8BeEyQXVx_pSNDS_6EWHRyW8wBK1B00Vyxg4SPNArx2Hb7bDVHIT9GuBS34o6RKfod96cy9vIbpbL-HftyE6IiFgwdZP11RHSN2meYWMrwh_zhUso43QgVaOgPgM3PV5WSGWc9UfWN0ds3dbEXxYLHsif6imMn6gvKfFzNh1jS77UW8ljbMlX9zuzTcieY2AnwC0fHjfxwoN18H096y-LtE20JSN9VLzAu-ZjYtXeMTkKoE");'>
+            </div>
+            <div class="flex-1">
+              <p class="text-[#111418] text-base font-medium leading-normal">Ethan Miller</p>
+              <p class="text-[#60758a] text-sm font-normal leading-normal">1 month ago</p>
+            </div>
+          </div>
+          <div class="flex gap-0.5">
+            <div class="text-[#111418]" data-icon="Star" data-size="20px" data-weight="fill">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor"
+                viewBox="0 0 256 256">
+                <path
+                  d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                </path>
+              </svg>
+            </div>
+            <div class="text-[#111418]" data-icon="Star" data-size="20px" data-weight="fill">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor"
+                viewBox="0 0 256 256">
+                <path
+                  d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                </path>
+              </svg>
+            </div>
+            <div class="text-[#111418]" data-icon="Star" data-size="20px" data-weight="fill">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor"
+                viewBox="0 0 256 256">
+                <path
+                  d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                </path>
+              </svg>
+            </div>
+            <div class="text-[#111418]" data-icon="Star" data-size="20px" data-weight="fill">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor"
+                viewBox="0 0 256 256">
+                <path
+                  d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                </path>
+              </svg>
+            </div>
+            <div class="text-[#bac4cf]" data-icon="Star" data-size="20px" data-weight="regular">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor"
+                viewBox="0 0 256 256">
+                <path
+                  d="M239.2,97.29a16,16,0,0,0-13.81-11L166,81.17,142.72,25.81h0a15.95,15.95,0,0,0-29.44,0L90.07,81.17,30.61,86.32a16,16,0,0,0-9.11,28.06L66.61,153.8,53.09,212.34a16,16,0,0,0,23.84,17.34l51-31,51.11,31a16,16,0,0,0,23.84-17.34l-13.51-58.6,45.1-39.36A16,16,0,0,0,239.2,97.29Zm-15.22,5-45.1,39.36a16,16,0,0,0-5.08,15.71L187.35,216v0l-51.07-31a15.9,15.9,0,0,0-16.54,0l-51,31h0L82.2,157.4a16,16,0,0,0-5.08-15.71L32,102.35a.37.37,0,0,1,0-.09l59.44-5.14a16,16,0,0,0,13.35-9.75L128,32.08l23.2,55.29a16,16,0,0,0,13.35,9.75L224,102.26S224,102.32,224,102.33Z">
+                </path>
+              </svg>
+            </div>
+          </div>
+          <p class="text-[#111418] text-base font-normal leading-normal">Great app with useful features, but could use
+            some improvements in the user interface.</p>
+          <div class="flex gap-9 text-[#60758a]">
+            <button class="flex items-center gap-2">
+              <div class="text-inherit" data-icon="ThumbsUp" data-size="20px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor"
+                  viewBox="0 0 256 256">
+                  <path
+                    d="M234,80.12A24,24,0,0,0,216,72H160V56a40,40,0,0,0-40-40,8,8,0,0,0-7.16,4.42L75.06,96H32a16,16,0,0,0-16,16v88a16,16,0,0,0,16,16H204a24,24,0,0,0,23.82-21l12-96A24,24,0,0,0,234,80.12ZM32,112H72v88H32ZM223.94,97l-12,96a8,8,0,0,1-7.94,7H88V105.89l36.71-73.43A24,24,0,0,1,144,56V80a8,8,0,0,0,8,8h64a8,8,0,0,1,7.94,9Z">
+                  </path>
+                </svg>
+              </div>
+              <p class="text-inherit">8</p>
+            </button>
+            <button class="flex items-center gap-2">
+              <div class="text-inherit" data-icon="ThumbsDown" data-size="20px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor"
+                  viewBox="0 0 256 256">
+                  <path
+                    d="M239.82,157l-12-96A24,24,0,0,0,204,40H32A16,16,0,0,0,16,56v88a16,16,0,0,0,16,16H75.06l37.78,75.58A8,8,0,0,0,120,240a40,40,0,0,0,40-40V184h56a24,24,0,0,0,23.82-27ZM72,144H32V56H72Zm150,21.29a7.88,7.88,0,0,1-6,2.71H152a8,8,0,0,0-8,8v24a24,24,0,0,1-19.29,23.54L88,150.11V56H204a8,8,0,0,1,7.94,7l12,96A7.87,7.87,0,0,1,222,165.29Z">
+                  </path>
+                </svg>
+              </div>
+              <p class="text-inherit">1</p>
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3 bg-white">
+          <div class="flex items-center gap-3">
+            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDEkYYdXHPvyzLMvzuHG75HrphjksCVFclNIy5jpe9oClDx7A7wO2MCdZJ8VcWE73XtP4sxuqdI1eUlTtbJef4QsHGOOjS7E-gM9n_ECuRRyZgpqOqc6hpJQ-Wvi0YCqRm5HMzv86wKaDv6pp3Ak-ZfBn32aQheYCsah7ig3tvrCT6uyyW3pGts7Fd2AOVonBykW4RB0x-J4dz6QrnXoXerFF7pdEk46AKXO4cI91zdoZ_HHgQEjpKmDINKLl5fce8DmSGdP8Bhtis");'>
+            </div>
+            <div class="flex-1">
+              <p class="text-[#111418] text-base font-medium leading-normal">Olivia Davis</p>
+              <p class="text-[#60758a] text-sm font-normal leading-normal">2 months ago</p>
+            </div>
+          </div>
+          <div class="flex gap-0.5">
+            <div class="text-[#111418]" data-icon="Star" data-size="20px" data-weight="fill">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor"
+                viewBox="0 0 256 256">
+                <path
+                  d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                </path>
+              </svg>
+            </div>
+            <div class="text-[#111418]" data-icon="Star" data-size="20px" data-weight="fill">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor"
+                viewBox="0 0 256 256">
+                <path
+                  d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                </path>
+              </svg>
+            </div>
+            <div class="text-[#bac4cf]" data-icon="Star" data-size="20px" data-weight="regular">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor"
+                viewBox="0 0 256 256">
+                <path
+                  d="M239.2,97.29a16,16,0,0,0-13.81-11L166,81.17,142.72,25.81h0a15.95,15.95,0,0,0-29.44,0L90.07,81.17,30.61,86.32a16,16,0,0,0-9.11,28.06L66.61,153.8,53.09,212.34a16,16,0,0,0,23.84,17.34l51-31,51.11,31a16,16,0,0,0,23.84-17.34l-13.51-58.6,45.1-39.36A16,16,0,0,0,239.2,97.29Zm-15.22,5-45.1,39.36a16,16,0,0,0-5.08,15.71L187.35,216v0l-51.07-31a15.9,15.9,0,0,0-16.54,0l-51,31h0L82.2,157.4a16,16,0,0,0-5.08-15.71L32,102.35a.37.37,0,0,1,0-.09l59.44-5.14a16,16,0,0,0,13.35-9.75L128,32.08l23.2,55.29a16,16,0,0,0,13.35,9.75L224,102.26S224,102.32,224,102.33Z">
+                </path>
+              </svg>
+            </div>
+            <div class="text-[#bac4cf]" data-icon="Star" data-size="20px" data-weight="regular">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor"
+                viewBox="0 0 256 256">
+                <path
+                  d="M239.2,97.29a16,16,0,0,0-13.81-11L166,81.17,142.72,25.81h0a15.95,15.95,0,0,0-29.44,0L90.07,81.17,30.61,86.32a16,16,0,0,0-9.11,28.06L66.61,153.8,53.09,212.34a16,16,0,0,0,23.84,17.34l51-31,51.11,31a16,16,0,0,0,23.84-17.34l-13.51-58.6,45.1-39.36A16,16,0,0,0,239.2,97.29Zm-15.22,5-45.1,39.36a16,16,0,0,0-5.08,15.71L187.35,216v0l-51.07-31a15.9,15.9,0,0,0-16.54,0l-51,31h0L82.2,157.4a16,16,0,0,0-5.08-15.71L32,102.35a.37.37,0,0,1,0-.09l59.44-5.14a16,16,0,0,0,13.35-9.75L128,32.08l23.2,55.29a16,16,0,0,0,13.35,9.75L224,102.26S224,102.32,224,102.33Z">
+                </path>
+              </svg>
+            </div>
+            <div class="text-[#bac4cf]" data-icon="Star" data-size="20px" data-weight="regular">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor"
+                viewBox="0 0 256 256">
+                <path
+                  d="M239.2,97.29a16,16,0,0,0-13.81-11L166,81.17,142.72,25.81h0a15.95,15.95,0,0,0-29.44,0L90.07,81.17,30.61,86.32a16,16,0,0,0-9.11,28.06L66.61,153.8,53.09,212.34a16,16,0,0,0,23.84,17.34l51-31,51.11,31a16,16,0,0,0,23.84-17.34l-13.51-58.6,45.1-39.36A16,16,0,0,0,239.2,97.29Zm-15.22,5-45.1,39.36a16,16,0,0,0-5.08,15.71L187.35,216v0l-51.07-31a15.9,15.9,0,0,0-16.54,0l-51,31h0L82.2,157.4a16,16,0,0,0-5.08-15.71L32,102.35a.37.37,0,0,1,0-.09l59.44-5.14a16,16,0,0,0,13.35-9.75L128,32.08l23.2,55.29a16,16,0,0,0,13.35,9.75L224,102.26S224,102.32,224,102.33Z">
+                </path>
+              </svg>
+            </div>
+          </div>
+          <p class="text-[#111418] text-base font-normal leading-normal">I've had some issues with the app crashing and
+            not saving my progress. Needs more stability.</p>
+          <div class="flex gap-9 text-[#60758a]">
+            <button class="flex items-center gap-2">
+              <div class="text-inherit" data-icon="ThumbsUp" data-size="20px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor"
+                  viewBox="0 0 256 256">
+                  <path
+                    d="M234,80.12A24,24,0,0,0,216,72H160V56a40,40,0,0,0-40-40,8,8,0,0,0-7.16,4.42L75.06,96H32a16,16,0,0,0-16,16v88a16,16,0,0,0,16,16H204a24,24,0,0,0,23.82-21l12-96A24,24,0,0,0,234,80.12ZM32,112H72v88H32ZM223.94,97l-12,96a8,8,0,0,1-7.94,7H88V105.89l36.71-73.43A24,24,0,0,1,144,56V80a8,8,0,0,0,8,8h64a8,8,0,0,1,7.94,9Z">
+                  </path>
+                </svg>
+              </div>
+              <p class="text-inherit">3</p>
+            </button>
+            <button class="flex items-center gap-2">
+              <div class="text-inherit" data-icon="ThumbsDown" data-size="20px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor"
+                  viewBox="0 0 256 256">
+                  <path
+                    d="M239.82,157l-12-96A24,24,0,0,0,204,40H32A16,16,0,0,0,16,56v88a16,16,0,0,0,16,16H75.06l37.78,75.58A8,8,0,0,0,120,240a40,40,0,0,0,40-40V184h56a24,24,0,0,0,23.82-27ZM72,144H32V56H72Zm150,21.29a7.88,7.88,0,0,1-6,2.71H152a8,8,0,0,0-8,8v24a24,24,0,0,1-19.29,23.54L88,150.11V56H204a8,8,0,0,1,7.94,7l12,96A7.87,7.87,0,0,1,222,165.29Z">
+                  </path>
+                </svg>
+              </div>
+              <p class="text-inherit">5</p>
+            </button>
+          </div>
+        </div>
+      </div>
+      <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Announcements
+      </h2>
+      <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+        <label class="flex flex-col min-w-40 flex-1">
+          <textarea placeholder="Type your announcement here"
+            class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#111418] focus:outline-0 focus:ring-0 border border-[#dbe0e6] bg-white focus:border-[#dbe0e6] min-h-36 placeholder:text-[#60758a] p-[15px] text-base font-normal leading-normal"></textarea>
+        </label>
+      </div>
+      <div class="flex px-4 py-3 justify-end">
+        <button
+          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#0c7ff2] text-white text-sm font-bold leading-normal tracking-[0.015em]">
+          <span class="truncate">Send Announcement</span>
+        </button>
+      </div>
+      <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Add New
+        Educational Content</h2>
+      <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+        <label class="flex flex-col min-w-40 flex-1">
+          <input placeholder="Content Title"
+            class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#111418] focus:outline-0 focus:ring-0 border border-[#dbe0e6] bg-white focus:border-[#dbe0e6] h-14 placeholder:text-[#60758a] p-[15px] text-base font-normal leading-normal"
+            value="" />
+        </label>
+      </div>
+      <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+        <label class="flex flex-col min-w-40 flex-1">
+          <textarea placeholder="Content Description"
+            class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#111418] focus:outline-0 focus:ring-0 border border-[#dbe0e6] bg-white focus:border-[#dbe0e6] min-h-36 placeholder:text-[#60758a] p-[15px] text-base font-normal leading-normal"></textarea>
+        </label>
+      </div>
+      <div class="flex px-4 py-3 justify-end">
+        <button
+          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#0c7ff2] text-white text-sm font-bold leading-normal tracking-[0.015em]">
+          <span class="truncate">Add Content</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+
+  <script>
+    const translations = {
+      pt: {
+        "Jan": "Jan",
+        "Feb": "Fev",
+        "Mar": "Mar",
+        "Apr": "Abr",
+        "May": "Mai",
+        "Jun": "Jun",
+        "Jul": "Jul",
+        "Aug": "Ago",
+        "Sep": "Set",
+        "Oct": "Out",
+        "Nov": "Nov",
+        "Dec": "Dez",
+        "Mon": "Seg",
+        "Tue": "Ter",
+        "Wed": "Qua",
+        "Thu": "Qui",
+        "Fri": "Sex",
+        "Sat": "Sáb",
+        "Sun": "Dom",
+        'Add Debt': 'Registrar Dívida',
+        'Plan': 'Plano',
+        'Education': 'Educação',
+        'Admin': 'Administração',
+        'Logout': 'Sair',
+        'Hi,': 'Olá,',
+        'Dashboard': 'Painel de Controle',
+        'Overview of app performance and user engagement': 'Visão geral do desempenho do app e engajamento dos usuários',
+        'Active Users': 'Usuários Ativos',
+        'Average Debt Payoff': 'Percentual Médio de Quitação',
+        'Weekly Usage': 'Uso Semanal',
+        'Last 7 Days': 'Últimos 7 Dias',
+        'Monthly Usage': 'Uso Mensal',
+        'Last 30 Days': 'Últimos 30 Dias',
+        'User Growth': 'Crescimento de Usuários',
+        'Last 12 Months': 'Últimos 12 Meses',
+        'Educational Tracks Completed': 'Trilhas Educativas Concluídas',
+        'User Feedback': 'Feedback dos Usuários',
+        'All': 'Todos',
+        'Positive': 'Positivos',
+        'Negative': 'Negativos',
+        'The app has been incredibly helpful in managing my finances and paying off my debt. Highly recommend!':
+          'O app tem sido incrivelmente útil para gerenciar minhas finanças e quitar minhas dívidas. Altamente recomendado!',
+        'Great app with useful features, but could use some improvements in the user interface.':
+          'Ótimo app com recursos úteis, mas poderia melhorar a interface de usuário.',
+        "I've had some issues with the app crashing and not saving my progress. Needs more stability.":
+          'Tive alguns problemas com o app travando e não salvando meu progresso. Precisa de mais estabilidade.',
+        'Send Announcement': 'Enviar Comunicado',
+        'Add New Educational Content': 'Adicionar Novo Conteúdo Educacional',
+        'Content Title': 'Título do Conteúdo',
+        'Content Description': 'Descrição do Conteúdo',
+        'Add Content': 'Adicionar Conteúdo',
+        'Register Debt': 'Registrar Dívida',
+        'Payoff Plan': 'Plano de Quitação',
+        'Financial Education': 'Educação Financeira',
+        'Admin Dashboard': 'Painel Administrativo',
+        'Type your announcement here': 'Escreva seu comunicado aqui',
+      },
+      en: {} // opcional si luego quieres volver al inglés
+    };
+
+    function translatePage(lang) {
+      document.querySelectorAll('body *').forEach(el => {
+        if (el.children.length === 0 && el.textContent.trim()) {
+          const original = el.getAttribute('data-original') || el.textContent.trim();
+          if (!el.getAttribute('data-original')) {
+            el.setAttribute('data-original', original);
+          }
+
+          if (translations[lang] && translations[lang][original]) {
+            el.textContent = translations[lang][original];
+          } else if (lang === 'en') {
+            el.textContent = el.getAttribute('data-original');
+          }
         }
-      
-        document.getElementById('language-switcher').addEventListener('change', e => {
-          translatePage(e.target.value);
-        });
-      </script>
-      
-  </body>
+
+        // también traducimos placeholder
+        if (el.placeholder) {
+          const orig = el.getAttribute('data-original-placeholder') || el.placeholder;
+          if (!el.getAttribute('data-original-placeholder')) {
+            el.setAttribute('data-original-placeholder', orig);
+          }
+          if (translations[lang][orig]) {
+            el.placeholder = translations[lang][orig];
+          } else if (lang === 'en') {
+            el.placeholder = el.getAttribute('data-original-placeholder');
+          }
+        }
+      });
+    }
+
+    document.getElementById('language-switcher').addEventListener('change', e => {
+      translatePage(e.target.value);
+    });
+  </script>
+
+</body>
+
 </html>

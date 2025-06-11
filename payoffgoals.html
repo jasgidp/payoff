@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8" />
+        <title>✔ Pay Off</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+        <link rel="stylesheet" as="style" onload="this.rel='stylesheet'"
+          href="https://fonts.googleapis.com/css2?display=swap&family=Manrope:wght@400;500;700;800&family=Noto+Sans:wght@400;500;700;900" />
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <script>
+          function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+          }
+        </script>
+      </head>
+
+<body class="bg-white min-h-screen" style="font-family: Manrope, 'Noto Sans', sans-serif;">
+    <header class="bg-white border-b border-[#cedbe8]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between h-16 items-center">
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+              <h1 class="text-2xl font-extrabold text-[#0d141c]">
+                <span class="text-blue-600">✔ Pay Off</span>
+              </h1>
+            </div>
+            <select id="language-switcher" class="border border-[#cedbe8] rounded px-2 py-1 text-sm">
+              <option value="en">🇺🇸 English</option>
+              <option value="pt">🇧🇷 Português</option>
+            </select>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-6 items-center">
+              <!-- Home Icon -->
+              <a href="payoffdashboard.html" class="text-[#0d141c]" aria-label="Home">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M3 12l9-9 9 9M4 10v10a1 1 0 001 1h3m10-11v10a1 1 0 01-1 1h-3" />
+                </svg>
+              </a>
+    
+              <a href="payoffdebt.html" class="text-[#0d141c] text-sm font-medium">Add Debt</a>
+              <a href="payoffPlan.html" class="text-[#0d141c] text-sm font-medium">Plan</a>
+              <a href="payoffgoals.html" class="text-[#0d141c] text-sm font-medium">Goals</a>
+              <a href="payofflearning.html" class="text-[#0d141c] text-sm font-medium">Education</a>
+              <a href="payoffadmin.html" class="text-[#0d141c] text-sm font-medium">Admin</a>
+    
+              <!-- Logout Icon -->
+              <a href="index.html" class="text-[#0d141c]" aria-label="Logout">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h6a2 2 0 012 2v1" />
+                </svg>
+              </a>
+    
+    
+              <!-- Award Icon Button -->
+              <!-- Award Icon Button -->
+              <!-- Notifications Icon -->
+              <button class="relative" aria-label="Notifications">
+                <span class="absolute -top-1 -right-1 inline-block w-2 h-2 bg-red-500 rounded-full"></span>
+                <svg class="w-5 h-5 text-[#0d141c]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                </svg>
+              </button>
+              <div class="flex items-center space-x-2">
+                <span class="text-sm text-[#0d141c] font-medium">Hi, Jonathan</span>
+                <div class="w-8 h-8 rounded-full bg-center bg-cover"
+                  style="background-image: url('https://lh3.googleusercontent.com/a-/profile');"></div>
+              </div>
+            </div>
+    
+            <!-- Mobile menu button -->
+            <div class="md:hidden flex items-center">
+              <button onclick="toggleMenu()" class="text-[#0d141c] focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+          <a href="payoffdashboard.html" class="block text-[#0d141c] text-sm font-medium">Home</a>
+          <a href="payoffdebt.html" class="block text-[#0d141c] text-sm font-medium">Register Debt</a>
+          <a href="payoffPlan.html" class="block text-[#0d141c] text-sm font-medium">Payoff Plan</a>
+          <a href="payoffgoals.html" class="text-[#0d141c] text-sm font-medium">Goals</a>
+          <a href="payofflearning.html" class="block text-[#0d141c] text-sm font-medium">Financial Education</a>
+          <a href="payoffadmin.html" class="block text-[#0d141c] text-sm font-medium">Admin Dashboard</a>
+          <a href="index.html" class="block text-[#0d141c] text-sm font-medium">Logout</a>
+        </div>
+      </header>
+
+  <main class="flex-1 px-6 py-8 max-w-3xl mx-auto space-y-6">
+    <h2 class="text-2xl font-bold text-[#0d141c]">Your Goals</h2>
+
+    <div class="p-4 border border-[#cedbe8] bg-white rounded-xl">
+      <h3 class="text-lg font-bold text-[#0d141c]">Plan a Dream</h3>
+      <p class="text-sm text-[#49739c] mt-1">Set a financial goal and track your progress toward your dreams.</p>
+    </div>
+
+   <!-- Dentro del <main> en cada div de objetivo, reemplaza por esto 👇 -->
+<!-- Goal 1: Trip to Europe -->
+<div class="bg-white p-4 border border-[#cedbe8] rounded-lg flex items-center space-x-4">
+    <img src="https://cdn-icons-png.flaticon.com/128/182/182958.png" alt="Travel" class="w-12 h-12" />
+    <div class="flex-1">
+      <p class="text-base font-medium text-[#0d141c]">Trip to Europe</p>
+      <p id="europe-text" class="text-sm text-[#49739c]">R$ 5.000 saved of R$ 12.000</p>
+      <div class="w-full bg-[#e7edf4] rounded-full h-3 mt-2">
+        <div id="europe-bar" class="bg-blue-600 h-3 rounded-full" style="width: 42%"></div>
+      </div>
+    </div>
+    <div class="flex flex-col space-y-1">
+      <button onclick="updateGoalProgress('europe', 500)" class="w-8 h-8 text-lg bg-blue-100 text-blue-600 rounded-full font-bold">+</button>
+      <button onclick="updateGoalProgress('europe', -500)" class="w-8 h-8 text-lg bg-red-100 text-red-600 rounded-full font-bold">−</button>
+    </div>
+  </div>
+  
+  <!-- Goal 2: Buy a Car -->
+  <div class="bg-white p-4 border border-[#cedbe8] rounded-lg flex items-center space-x-4">
+    <img src="https://cdn-icons-png.flaticon.com/128/743/743131.png" alt="Car" class="w-12 h-12" />
+    <div class="flex-1">
+      <p class="text-base font-medium text-[#0d141c]">Buy a Car</p>
+      <p id="car-text" class="text-sm text-[#49739c]">R$ 8.000 saved of R$ 25.000</p>
+      <div class="w-full bg-[#e7edf4] rounded-full h-3 mt-2">
+        <div id="car-bar" class="bg-blue-600 h-3 rounded-full" style="width: 32%"></div>
+      </div>
+    </div>
+    <div class="flex flex-col space-y-1">
+      <button onclick="updateGoalProgress('car', 500)" class="w-8 h-8 text-lg bg-blue-100 text-blue-600 rounded-full font-bold">+</button>
+      <button onclick="updateGoalProgress('car', -500)" class="w-8 h-8 text-lg bg-red-100 text-red-600 rounded-full font-bold">−</button>
+    </div>
+  </div>
+  
+  <!-- Goal 3: New House -->
+  <div class="bg-white p-4 border border-[#cedbe8] rounded-lg flex items-center space-x-4">
+    <img src="https://cdn-icons-png.flaticon.com/128/69/69840.png" alt="House" class="w-12 h-12" />
+    <div class="flex-1">
+      <p class="text-base font-medium text-[#0d141c]">New House</p>
+      <p id="house-text" class="text-sm text-[#49739c]">R$ 15.000 saved of R$ 100.000</p>
+      <div class="w-full bg-[#e7edf4] rounded-full h-3 mt-2">
+        <div id="house-bar" class="bg-blue-600 h-3 rounded-full" style="width: 15%"></div>
+      </div>
+    </div>
+    <div class="flex flex-col space-y-1">
+      <button onclick="updateGoalProgress('house', 500)" class="w-8 h-8 text-lg bg-blue-100 text-blue-600 rounded-full font-bold">+</button>
+      <button onclick="updateGoalProgress('house', -500)" class="w-8 h-8 text-lg bg-red-100 text-red-600 rounded-full font-bold">−</button>
+    </div>
+  </div>
+  
+
+    <!-- Add New Goal -->
+    <div class="pt-6">
+      <button class="w-full h-12 rounded-lg bg-blue-600 text-white font-bold">Add New Goal</button>
+    </div>
+  </main>
+  <!-- Agrega este script al final del <body> -->
+    <script>
+        const goals = {
+          europe: { saved: 5000, target: 12000 },
+          car: { saved: 8000, target: 25000 },
+          house: { saved: 15000, target: 100000 },
+        };
+      
+        function updateGoalProgress(id, amount) {
+          const goal = goals[id];
+          goal.saved += amount;
+          if (goal.saved < 0) goal.saved = 0;
+          if (goal.saved > goal.target) goal.saved = goal.target;
+      
+          const percent = Math.round((goal.saved / goal.target) * 100);
+          document.getElementById(`${id}-text`).textContent = `R$ ${goal.saved.toLocaleString()} saved of R$ ${goal.target.toLocaleString()}`;
+          document.getElementById(`${id}-bar`).style.width = `${percent}%`;
+        }
+      </script>
+      
+      <script>
+        const translations = {
+          pt: {
+            'Add Debt': 'Registrar Dívida',
+            'Plan': 'Plano',
+            'Education': 'Educação',
+            'Admin': 'Administração',
+            'Logout': 'Sair',
+            'Hi, Jonathan': 'Olá, Jonathan',
+            'Home': 'Início',
+            'Register Debt': 'Registrar Dívida',
+            'Payoff Plan': 'Plano de Quitação',
+            'Financial Education': 'Educação Financeira',
+            'Admin Dashboard': 'Painel Administrativo',
+            'Your Plan': 'Seu Plano',
+            'Your Goals': 'Suas Metas',
+            'Plan a Dream': 'Planeje um Sonho',
+            'Set a financial goal and track your progress toward your dreams.':
+              'Defina uma meta financeira e acompanhe seu progresso rumo aos seus sonhos.',
+            'Trip to Europe': 'Viagem à Europa',
+            'Buy a Car': 'Comprar um Carro',
+            'New House': 'Nova Casa',
+            'R$ 5.000 saved of R$ 12.000': 'R$ 5.000 poupados de R$ 12.000',
+            'R$ 8.000 saved of R$ 25.000': 'R$ 8.000 poupados de R$ 25.000',
+            'R$ 15.000 saved of R$ 100.000': 'R$ 15.000 poupados de R$ 100.000',
+            'Snowball Strategy': 'Estratégia Bola de Neve',
+            'Focus on paying off your smallest debts first, building momentum and motivation.':
+              'Priorize quitar suas menores dívidas primeiro, ganhando impulso e motivação.',
+            'Suggested Monthly Payment': 'Pagamento Mensal Sugerido',
+            'e.g., $250': 'ex: R$250',
+            'Debts': 'Dívidas',
+            'Credit Card': 'Cartão de Crédito',
+            'Personal Loan': 'Empréstimo Pessoal',
+            'Medical Bill': 'Conta Médica',
+            'Student Loan': 'Empréstimo Estudantil',
+            '$1,200 remaining': 'Restando R$1.200',
+            '$800 remaining': 'Restando R$800',
+            '$500 remaining': 'Restando R$500',
+            '$0 remaining': 'Quitado',
+            'Adjust Payment': 'Ajustar Pagamento',
+            'Monthly Payment:': 'Pagamento Mensal:',
+            'Increasing your monthly payment will reduce your total repayment time.':
+              'Aumentar seu pagamento mensal reduzirá o tempo total de quitação.',
+            'Save Changes': 'Salvar Alterações',
+            'Add New Goal': 'Nova Meta'
+          }
+        };
+      
+        function translatePage(lang) {
+          document.querySelectorAll('body *').forEach(el => {
+            if (el.children.length === 0 && el.textContent.trim()) {
+              const original = el.getAttribute('data-original') || el.textContent.trim();
+              if (!el.hasAttribute('data-original')) {
+                el.setAttribute('data-original', original);
+              }
+      
+              if (translations[lang][original]) {
+                el.textContent = translations[lang][original];
+              } else if (lang === 'en') {
+                el.textContent = el.getAttribute('data-original');
+              }
+            }
+      
+            if (el.placeholder) {
+              const originalPlaceholder = el.getAttribute('data-original-placeholder') || el.placeholder;
+              if (!el.hasAttribute('data-original-placeholder')) {
+                el.setAttribute('data-original-placeholder', originalPlaceholder);
+              }
+      
+              if (translations[lang][originalPlaceholder]) {
+                el.placeholder = translations[lang][originalPlaceholder];
+              } else if (lang === 'en') {
+                el.placeholder = el.getAttribute('data-original-placeholder');
+              }
+            }
+          });
+        }
+      
+        document.getElementById('language-switcher').addEventListener('change', e => {
+          translatePage(e.target.value);
+        });
+      </script>
+      
+</body>
+</html>
